@@ -1,0 +1,15 @@
+{
+  "name": "digital-twin-pm-all-in-one",
+  "version": "1.0.0",
+  "description": "Digital Twin Project Management System - Phase 1 All-In-One Web App",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix client",
+    "dev:all": "npm run start --prefix server & npm run dev --prefix client",
+    "start": "npm run start --prefix server",
+    "server": "npm run start --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server"
+  }
+}

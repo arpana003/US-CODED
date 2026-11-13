@@ -1,0 +1,332 @@
+/* ═══════════════════════════════════════════════════════════════
+   US-CODED — Master Enterprise Portal Styles (Employee Workspace)
+   ═══════════════════════════════════════════════════════════════ */
+
+.employee-page {
+  padding: 28px 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Page Header ────────────────────────────────────────────────────── */
+.employee-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.employee-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.employee-avatar-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(155, 138, 251, 0.25), rgba(120, 220, 232, 0.2));
+  border: 1px solid rgba(155, 138, 251, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #78DCE8;
+  box-shadow: 0 4px 16px rgba(155, 138, 251, 0.15);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.employee-avatar-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.employee-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.employee-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-greeting {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: #F4F2EE;
+  letter-spacing: -0.02em;
+}
+
+.employee-role-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(120, 220, 232, 0.12);
+  border: 1px solid rgba(120, 220, 232, 0.3);
+  color: #78DCE8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.employee-subtitle {
+  color: #A5A5B0;
+  font-size: 0.875rem;
+}
+
+.employee-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── KPI Stat Cards ─────────────────────────────────────────────────── */
+.employee-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1100px) {
+  .employee-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .employee-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  background: #15161B;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(155, 138, 251, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.stat-card-icon.blue {
+  background: rgba(120, 220, 232, 0.15);
+  color: #78DCE8;
+  border: 1px solid rgba(120, 220, 232, 0.3);
+}
+
+.stat-card-icon.green {
+  background: rgba(114, 201, 165, 0.15);
+  color: #72C9A5;
+  border: 1px solid rgba(114, 201, 165, 0.3);
+}
+
+.stat-card-icon.amber {
+  background: rgba(231, 184, 108, 0.15);
+  color: #E7B86C;
+  border: 1px solid rgba(231, 184, 108, 0.3);
+}
+
+.stat-card-icon.purple {
+  background: rgba(155, 138, 251, 0.15);
+  color: #B5A5FF;
+  border: 1px solid rgba(155, 138, 251, 0.3);
+}
+
+.stat-card-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #A5A5B0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-card-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #F4F2EE;
+  line-height: 1;
+  font-feature-settings: "tnum";
+}
+
+.stat-card-sub {
+  font-size: 0.8rem;
+  color: #6D6F7C;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Content Sections ───────────────────────────────────────────────── */
+.employee-section {
+  background: #15161B;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.employee-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.employee-section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #F4F2EE;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-section-desc {
+  font-size: 0.8125rem;
+  color: #A5A5B0;
+  margin-top: 2px;
+}
+
+/* ── Badges ─────────────────────────────────────────────────────────── */
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-status.todo {
+  background: rgba(255, 255, 255, 0.05);
+  color: #A5A5B0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.badge-status.in-progress {
+  background: rgba(155, 138, 251, 0.15);
+  color: #B5A5FF;
+  border: 1px solid rgba(155, 138, 251, 0.35);
+}
+
+.badge-status.under-review {
+  background: rgba(231, 184, 108, 0.15);
+  color: #E7B86C;
+  border: 1px solid rgba(231, 184, 108, 0.35);
+}
+
+.badge-status.completed,
+.badge-status.done {
+  background: rgba(114, 201, 165, 0.15);
+  color: #72C9A5;
+  border: 1px solid rgba(114, 201, 165, 0.35);
+}
+
+.badge-status.blocked {
+  background: rgba(228, 124, 130, 0.15);
+  color: #E47C82;
+  border: 1px solid rgba(228, 124, 130, 0.35);
+}
+
+.badge-priority {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-priority.low {
+  background: rgba(255, 255, 255, 0.05);
+  color: #6D6F7C;
+}
+
+.badge-priority.medium {
+  background: rgba(120, 220, 232, 0.12);
+  color: #78DCE8;
+}
+
+.badge-priority.high {
+  background: rgba(231, 184, 108, 0.15);
+  color: #E7B86C;
+}
+
+.badge-priority.critical {
+  background: rgba(228, 124, 130, 0.18);
+  color: #E47C82;
+}
+
+/* ── Task Detail Layout ─────────────────────────────────────────────── */
+.task-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .task-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.task-detail-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Profile Grid ───────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
