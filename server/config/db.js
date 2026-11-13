@@ -18,7 +18,10 @@ export const connectDB = async () => {
     console.log(`[Database] Connected successfully to MongoDB at ${uri}`);
   } catch (error) {
     console.warn(`[Database] Could not connect to local/remote MongoDB (${error.message}).`);
-    console.log('[Database] Initializing fallback in-memory MongoDB server for seamless zero-setup execution...');
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Production MongoDB connection failed. Check the MONGODB_URI environment variable and Atlas network access.');
+    }
+    console.log('[Database] Initializing fallback in-memory MongoDB server for local development...');
     return await connectMemoryDB();
   }
 };

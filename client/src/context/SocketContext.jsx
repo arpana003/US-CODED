@@ -8,7 +8,8 @@ export const SocketProvider = ({ children }) => {
   const [connected, setConnected] = useState(false);
 
   useEffect(() => {
-    socketRef.current = io('/', {
+    const socketUrl = import.meta.env.VITE_SOCKET_URL || window.location.origin;
+    socketRef.current = io(socketUrl, {
       path: '/socket.io',
       transports: ['websocket', 'polling'],
       reconnectionAttempts: 5,
